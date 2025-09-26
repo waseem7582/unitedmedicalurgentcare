@@ -1,0 +1,233 @@
+.banner-section{
+   padding-top: 100px;
+   padding-bottom: 350px;
+   @media only screen and (max-width: 1399px) {
+     padding-top: 100px;
+     padding-bottom: 300px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 250px;
+  }
+  @media only screen and (max-width: 580px) {
+    padding-top: 40px;
+    padding-bottom: 200px;
+  }
+
+  .banner-btn{
+    justify-content: center;
+    margin: -8px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    .btn{
+      margin: 8px !important;
+    }
+  }
+   .banner-content{
+     position: relative;
+     p{
+       font-weight: 500;
+     }
+      @media only screen and (max-width: 1680px) {
+         margin-left: 100px;
+      }
+        @media only screen and (max-width: 1399px) {
+          .title{
+            font-size: 36px;
+            font-weight: 700;
+          }
+      }
+        @media only screen and (max-width: 991px) {
+          margin-left: 60px;
+       }
+       @media only screen and (max-width: 768px) {
+        margin-left: 0px;
+       }
+        @media only screen and (max-width: 520px) {
+          .title{
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+        @media only screen and (max-width: 480px) {
+          .title{
+            font-size: 26px;
+            font-weight: 700;
+          }
+        }
+        @media only screen and (max-width: 375px) {
+          .title{
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+     .banner-element{
+       position: absolute;
+       bottom: -200px;
+       left: 127px;
+       width: 400px;
+       animation: scroll-ver 2s cubic-bezier(0.75, 0.02, 0.31, 0.87) infinite;
+       @media only screen and (max-width: 1399px) {
+        bottom: -170px;
+        left: 10px;
+        width: 400px;
+       }
+       @media only screen and (max-width: 768px) {
+        width: 300px;
+        left: 25px;
+        bottom: -140px;
+       }
+       @media only screen and (max-width: 420px) {
+        width: 260px;
+        left: 20px;
+        bottom: -140px;
+       }
+       @media only screen and (max-width: 375px) {
+        width: 250px;
+        left: 0px;
+        bottom: -140px;
+       }
+       img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+       }
+     }
+   }
+
+}
+
+
+
+.banner-bottom-area{
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+  @media only screen and (max-width: 1399px) {
+    margin-top: -80px;
+  }
+  @media only screen and (max-width: 580px) {
+    margin-top: 40px;
+  }
+   .banner-bottom-wedget{
+      background-color: $section--bg;
+      box-shadow: $shadow--color;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      .title{
+        font-size: 20px;
+      }
+      p{
+        font-size: 14px;
+      }
+      .icon{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px !important;
+        margin: 0 auto;
+         img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+         }
+      }
+   }
+}
+
+.banner-flotting-item {
+  position: relative;
+  z-index: 2;
+  background: $section--bg;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid $border--base;
+  padding: 30px;
+  border-radius: 15px;
+}
+.banner-flotting-item .banner-flotting-item-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+.banner-flotting-item .banner-flotting-item-form .form-group {
+  position: relative;
+  flex: 0 0 24%;
+  margin: 5px;
+}
+@media only screen and (max-width: 1199px) {
+  .banner-flotting-item .banner-flotting-item-form .form-group {
+   flex: 0 0 32%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .banner-flotting-item .banner-flotting-item-form .form-group {
+    flex: 0 0 48%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner-flotting-item .banner-flotting-item-form .form-group {
+     flex: 0 0 100%;
+  }
+}
+.banner-flotting-item .banner-flotting-item-form .form-group.single {
+     flex: 0 0 74%;
+}
+.banner-flotting-item .banner-flotting-item-form .form-group.btn-search {
+       flex: 0 0 24%;
+}
+.banner-flotting-item .banner-flotting-item-form .form-group .search-btn {
+  padding: 11px 25px;
+}
+.banner-flotting-item .banner-flotting-item-form .form-group input {
+  caret-color: $base--color;
+}
+.banner-flotting-item .banner-flotting-item-form .dr-name i {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 12px;
+}
+.banner-flotting-item .banner-flotting-item-form .dr-name input {
+  padding-left: 40px;
+}
+
+// vendor-banner
+.vendor-banner{
+  padding-top: 160px;
+  padding-bottom: 160px;
+  @media only screen and (max-width: 991px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 580px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media only screen and (max-width: 425px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .vendor-banner-content{
+    .banner-title{
+      span{
+        font-weight: 700;
+      }
+    }
+    .banner-btn{
+      margin-top: 30px;
+      .btn--base{
+        padding-top: 4px;
+      }
+      i{
+        font-size: 30px;
+        position: relative;
+        top: 4px;
+        animation: scroll-ver 1s linear infinite;
+      }
+    }
+  }
+}

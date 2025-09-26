@@ -1,0 +1,13 @@
+@extends('frontend.layouts.master')
+@push('css')
+@endpush
+@section('content')
+    @include('frontend.section.banner-section')
+    @include('frontend.section.project-feature')
+    @include('frontend.section.features-section')
+    @include('frontend.section.how-its-work-section')
+    @include('frontend.section.statistics')
+    @include('frontend.section.download-app')
+@endsection
+@push('script')
+@endpush

@@ -1,0 +1,96 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+.footer-section .footer-area {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+.footer-section{
+  background-position: bottom !important;
+}
+.footer-section .footer-area .footer-logo {
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.footer-section .footer-area .footer-social-icon {
+  margin-bottom: 20px;
+}
+
+.footer-section .footer-area .footer-social-icon a {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 10px 8px 8px 0px;
+}
+
+.footer-section .footer-area .footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  background: $base--color;
+}
+
+.footer-section .footer-area .footer-content {
+  margin-bottom: 40px;
+  color: $color--text;
+}
+
+.footer-section .footer-area .copyright-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $border--base;
+  padding-top: 20px;
+  color: #000000;
+}
+.footer-section .footer-area .copyright-area span {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-section .footer-area .copyright-area {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .footer-section .footer-area .copyright-area {
+    font-size: 12px;
+  }
+}
+
+.footer-section .footer-area .copyright-area .page-link-item {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-section .footer-area .copyright-area .page-link-item {
+        justify-content: center;
+  }
+}
+.footer-section .footer-area .copyright-area .page-link-item li {
+  margin-left: 20px;
+  list-style-type: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-section .footer-area .copyright-area .page-link-item li {
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .footer-section .footer-area .footer-content {
+    text-align: justify;
+    font-size: 14px;
+  }
+}

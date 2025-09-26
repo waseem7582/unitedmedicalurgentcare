@@ -1,0 +1,76 @@
+@extends('hospital.layouts.master')
+
+@push('css')
+
+@endpush
+
+@section('breadcrumb')
+    @include('hospital.components.breadcrumb',['breadcrumbs' => [
+        [
+            'name'  => __("Dashboard"),
+            'url'   => route('hospitals.dashboard'),
+        ]
+    ], 'active' => __("Support Tickets")])
+@endsection
+
+@section('content')
+<div class="table-area mt-10">
+    <div class="table-wrapper">
+        <div class="dashboard-header-wrapper">
+            <h4 class="title">{{ __("Support Tickets") }}</h4>
+            <div class="dashboard-btn-wrapper">
+                <div class="dashboard-btn">
+                    <a href="{{ route('hospitals.support.ticket.create') }}" class="btn--base"><i class="las la-plus me-1"></i>{{ __("Add New") }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>{{ __("Ticket ID") }} </th>
+                        <th>{{ __("Subject") }}</th>
+                        <th>{{ __("Message") }}</th>
+                        <th>{{ __("Status") }}</th>
+                        <th>{{ __("Last Reply") }}</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($support_tickets as $item)
+                        <tr>
+                            <td>#{{ $item->token }}</td>
+                            <td><span class="text--info">{{ $item->subject }}</span></td>
+                            <td>{{ Str::words($item->desc, 10, '...') }}</td>
+                            <td>
+                                <span class="{{ $item->stringStatus->class }}">
+                                    {{ __($item->stringStatus->value) }}
+                                </span>
+
+                            </td>
+                            <td>{{ $item->created_at->format("Y-m-d H:i A") }}</td>
+                            <td>
+                                <a href="{{ route('hospitals.support.ticket.conversation',encrypt($item->id)) }}" class="btn btn--base"><i class="las la-comment"></i></a>
+                            </td>
+                        </tr>
+                    @empty
+                        <td colspan="7">
+                            <div style="margin-top: 37.5px" class="alert alert-primary w-100 text-center">
+                                {{ __("No Record Found!") }}
+                            </div>
+                        </td>
+                    @endforelse
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{ get_paginate($support_tickets) }}
+</div>
+@endsection
+
+@push('script')
+    <script>
+
+    </script>
+@endpush
